@@ -10,15 +10,15 @@
   --f-body: 'DM Sans', system-ui, sans-serif;
   --f-accent: 'Instrument Serif', Georgia, serif;
 
-  --u-bg:#080f0b; --u-bg2:#0c1610; --u-surface:rgba(14,28,20,.45);
+  --u-bg:#080f0b; --u-bg2:#0c1610; --u-surface:rgba(255,255,255,.03);
   --u-primary:#5cdb95; --u-primary-dim:rgba(92,219,149,.08); --u-primary-glow:rgba(92,219,149,.15);
   --u-accent:#8ee4af; --u-text:#e8f0ec; --u-text2:rgba(232,240,236,.65); --u-text3:rgba(232,240,236,.35);
-  --u-border:rgba(92,219,149,.08); --u-border2:rgba(92,219,149,.18);
+  --u-border:rgba(255,255,255,.06); --u-border2:rgba(255,255,255,.12);
 
-  --d-bg:#0f0808; --d-bg2:#160d0d; --d-surface:rgba(28,14,14,.45);
+  --d-bg:#0f0808; --d-bg2:#160d0d; --d-surface:rgba(255,255,255,.02);
   --d-primary:#d94f4f; --d-primary-dim:rgba(217,79,79,.08); --d-primary-glow:rgba(217,79,79,.15);
   --d-accent:#e88a8a; --d-text:#f0e8e8; --d-text2:rgba(240,232,232,.65); --d-text3:rgba(240,232,232,.35);
-  --d-border:rgba(217,79,79,.08); --d-border2:rgba(217,79,79,.18);
+  --d-border:rgba(255,255,255,.05); --d-border2:rgba(255,255,255,.1);
 
   --bg:var(--u-bg); --bg2:var(--u-bg2); --surface:var(--u-surface);
   --primary:var(--u-primary); --primary-dim:var(--u-primary-dim); --primary-glow:var(--u-primary-glow);
