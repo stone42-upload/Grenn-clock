@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 let scene, camera, renderer, particles;
-const particleCount = 800;
+const particleCount = 150;
 let isDystopia = false;
 let mouseX = 0;
 let mouseY = 0;
@@ -28,7 +28,7 @@ function init() {
   
   for (let i = 0; i < particleCount; i++) {
     positions[i * 3] = (Math.random() - 0.5) * 80; // x
-    positions[i * 3 + 1] = (Math.random() - 0.5) * 80; // y
+    positions[i * 3 + 1] = (Math.random() * -30) - 10; // y (only bottom of the screen)
     positions[i * 3 + 2] = (Math.random() - 0.5) * 50; // z
     scales[i] = Math.random();
   }
