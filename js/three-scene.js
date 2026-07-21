@@ -51,12 +51,13 @@ function init() {
       void main() {
         vUv = uv;
         vec3 pos = position;
-        // Float animation
-        pos.y += sin(time * 0.3 + pos.x) * 2.5;
-        pos.x += cos(time * 0.2 + pos.y) * 2.0;
+        // Float animation: smoother and slower
+        pos.y += sin(time * 0.15 + pos.x) * 1.5;
+        pos.x += cos(time * 0.1 + pos.y) * 1.0;
         
         vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
-        gl_PointSize = 45.0 * aScale * (15.0 / -mvPosition.z);
+        // Affine particles: smaller base size
+        gl_PointSize = 18.0 * aScale * (15.0 / -mvPosition.z);
         gl_Position = projectionMatrix * mvPosition;
       }
     `,
@@ -71,11 +72,11 @@ function init() {
         float ll = length(xy);
         if (ll > 0.5) discard;
         
-        // Majestic Glow effect
-        float alpha = pow((0.5 - ll) * 2.0, 1.8);
+        // Majestic Glow effect: softer
+        float alpha = pow((0.5 - ll) * 2.0, 2.5);
         
         vec3 color = mix(colorUtopia, colorDystopia, mixFactor);
-        gl_FragColor = vec4(color, alpha * 0.5);
+        gl_FragColor = vec4(color, alpha * 0.35);
       }
     `,
     transparent: true,
