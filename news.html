@@ -52,7 +52,9 @@
     <div class="news-grid">
       <!-- Card 1 -->
       <article class="news-card reveal">
-        <img src="images/hero-utopia.png" alt="Innovation" class="news-card-img">
+        <div class="news-card-img-wrap">
+          <img src="images/news-solar.png" alt="Innovation" class="news-card-img">
+        </div>
         <div class="news-card-body">
           <span class="news-card-tag">Innovation</span>
           <h3 class="news-card-title"><a href="#">New record for solar energy in Europe</a></h3>
@@ -63,23 +65,27 @@
 
       <!-- Card 2 -->
       <article class="news-card reveal">
-        <img src="images/icon-pollution.png" alt="Plastic" class="news-card-img">
+        <div class="news-card-img-wrap">
+          <img src="images/news-plastic.jpg" alt="Plastic" class="news-card-img">
+        </div>
         <div class="news-card-body">
           <span class="news-card-tag">Politics</span>
           <h3 class="news-card-title"><a href="#">Global Plastics Treaty: Negotiations stall</a></h3>
-          <p class="news-card-excerpt">States struggle to agree on strict quotas for reducing the production of virgin plastics.</p>
-          <span class="news-card-date">3 days ago</span>
+          <p class="news-card-excerpt">Delegates fail to reach an agreement on capping plastic production at the latest UN summit, extending the timeline for a legally binding treaty.</p>
+          <span class="news-card-date">July 18, 2026</span>
         </div>
       </article>
 
       <!-- Card 3 -->
-      <article class="news-card reveal">
-        <img src="images/icon-reduce.png" alt="Eco-design" class="news-card-img">
+      <article class="news-card reveal" style="cursor: pointer;" onclick="window.open('https://www.apple.com/ca/fr/newsroom/2023/04/apple-will-use-100-percent-recycled-cobalt-in-batteries-by-2025/', '_blank')">
+        <div class="news-card-img-wrap">
+          <img src="images/news-apple.jpg" alt="Eco-design" class="news-card-img">
+        </div>
         <div class="news-card-body">
           <span class="news-card-tag">Eco-design</span>
-          <h3 class="news-card-title"><a href="#">Apple announces 100% recycled batteries</a></h3>
-          <p class="news-card-excerpt">A major breakthrough in cobalt and lithium recovery, proving the viability of closed circular supply chains.</p>
-          <span class="news-card-date">Last week</span>
+          <h3 class="news-card-title"><a href="https://www.apple.com/ca/fr/newsroom/2023/04/apple-will-use-100-percent-recycled-cobalt-in-batteries-by-2025/" target="_blank" onclick="event.stopPropagation()">Apple announces 100% recycled batteries</a></h3>
+          <p class="news-card-excerpt">By 2025, the brand promises to use fully recycled cobalt and rare earth elements for its key products.</p>
+          <span class="news-card-date">April 2023</span>
         </div>
       </article>
     </div>
