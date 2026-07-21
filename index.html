@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Clock — The future is in our hands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+
+  <!-- Inject Navbar here -->
+  <div id="nav-slot"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg hero-bg--utopia"></div>
+    <div class="hero-bg hero-bg--dystopia"></div>
+    <div class="hero-overlay"></div>
+    
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas" class="three-canvas"></canvas>
+    <div class="hero-particles" id="hero-particles"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="utopia-text">A desirable future</span>
+        <span class="dystopia-text">A point of no return</span>
+      </p>
+      <h1 class="hero-title">
+        <span class="utopia-text">We've talked <em>enough</em></span>
+        <span class="dystopia-text">Programmed <em>collapse</em></span>
+      </h1>
+      <p class="hero-subtitle">
+        <span class="utopia-text">It's time to act. Let's build a model where innovation respects planetary boundaries, where every resource is valued and nature is restored.</span>
+        <span class="dystopia-text">The result of endless extraction. A linear loop of consumption and waste, leading us to irreversible depletion.</span>
+      </p>
+      <div class="hero-actions">
+        <a href="#cycle" class="btn btn--primary">Understand the impact</a>
+        <a href="forum.html" class="btn btn--secondary">Join the community</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll__line"></div>
+    </div>
+  </section>
+
+  <!-- Cycle Section -->
+  <section class="section" id="cycle">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <p class="section-eyebrow">
+          <span class="utopia-text">Circular Economy</span>
+          <span class="dystopia-text">Linear Economy</span>
+        </p>
+        <h2 class="section-title">
+          <span class="utopia-text">The Virtuous <em>Loop</em></span>
+          <span class="dystopia-text">The Destructive <em>Spiral</em></span>
+        </h2>
+        <p class="section-desc mx-auto">
+          <span class="utopia-text">Nothing is lost, everything is transformed. The circular economy mimics natural ecosystems to create sustainable value.</span>
+          <span class="dystopia-text">Take, make, dispose. A model that ignores the physical limits of our world.</span>
+        </p>
+      </div>
+
+      <div class="cycle-visual reveal" id="cycle-diagram">
+        <div class="cycle-crack-overlay">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M 45 0 L 52 20 L 48 35 L 55 50 L 47 65 L 58 85 L 50 100" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round" />
+            <path d="M 20 45 L 35 48 L 50 55 L 65 48 L 85 52" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        
+        <svg class="cycle-svg" viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="160" class="cycle-ring" stroke-width="2" fill="none" stroke-dasharray="4 8" />
+          <circle cx="200" cy="200" r="140" class="cycle-ring-inner" stroke-width="1" fill="none" />
+          
+          <path d="M 200 40 A 160 160 0 0 1 360 200" class="cycle-arrow" marker-end="url(#arrow)" />
+          <path d="M 360 200 A 160 160 0 0 1 200 360" class="cycle-arrow" marker-end="url(#arrow)" />
+          <path d="M 200 360 A 160 160 0 0 1 40 200" class="cycle-arrow" marker-end="url(#arrow)" />
+          <path d="M 40 200 A 160 160 0 0 1 200 40" class="cycle-arrow" marker-end="url(#arrow)" />
+
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-head" />
+            </marker>
+          </defs>
+
+          <!-- Top Node -->
+          <g class="cycle-node" transform="translate(200, 40)">
+            <circle r="32" class="node-bg" />
+            <text class="node-label-main" y="2" text-anchor="middle">
+              <tspan class="utopia-text">Reduce</tspan><tspan class="dystopia-text">Extract</tspan>
+            </text>
+            <text class="node-label-sub" y="16" text-anchor="middle">
+              <tspan class="utopia-text">At the source</tspan><tspan class="dystopia-text">Limitless</tspan>
+            </text>
+          </g>
+
+          <!-- Right Node -->
+          <g class="cycle-node" transform="translate(360, 200)">
+            <circle r="32" class="node-bg" />
+            <text class="node-label-main" y="2" text-anchor="middle">
+              <tspan class="utopia-text">Reuse</tspan><tspan class="dystopia-text">Produce</tspan>
+            </text>
+            <text class="node-label-sub" y="16" text-anchor="middle">
+              <tspan class="utopia-text">Prolong</tspan><tspan class="dystopia-text">Overconsume</tspan>
+            </text>
+          </g>
+
+          <!-- Bottom Node -->
+          <g class="cycle-node" transform="translate(200, 360)">
+            <circle r="32" class="node-bg" />
+            <text class="node-label-main" y="2" text-anchor="middle">
+              <tspan class="utopia-text">Recycle</tspan><tspan class="dystopia-text">Discard</tspan>
+            </text>
+            <text class="node-label-sub" y="16" text-anchor="middle">
+              <tspan class="utopia-text">Transform</tspan><tspan class="dystopia-text">Landfill</tspan>
+            </text>
+          </g>
+
+          <!-- Left Node -->
+          <g class="cycle-node" transform="translate(40, 200)">
+            <circle r="32" class="node-bg" />
+            <text class="node-label-main" y="2" text-anchor="middle">
+              <tspan class="utopia-text">Rethink</tspan><tspan class="dystopia-text">Pollute</tspan>
+            </text>
+            <text class="node-label-sub" y="16" text-anchor="middle">
+              <tspan class="utopia-text">From design</tspan><tspan class="dystopia-text">Degrade</tspan>
+            </text>
+          </g>
+
+          <!-- Center Node -->
+          <g class="cycle-node" transform="translate(200, 200)">
+            <circle r="45" class="center-circle" />
+            <text class="center-label" y="4" text-anchor="middle">Impact</text>
+            <text class="center-sub" y="20" text-anchor="middle">
+              <tspan class="utopia-text">+25% GDP</tspan><tspan class="dystopia-text">-40% GDP</tspan>
+            </text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars Section -->
+  <section class="section section--alt" id="pillars">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">The Foundations</p>
+        <h2 class="section-title">
+          <span class="utopia-text">4 pillars of <em>change</em></span>
+          <span class="dystopia-text">4 acts of <em>destruction</em></span>
+        </h2>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar">
+          <img src="images/icon-reduce.png" alt="Reduce" class="pillar-icon utopia-text">
+          <img src="images/icon-overprod.png" alt="Overproduction" class="pillar-icon dystopia-text">
+          <span class="pillar-index">01</span>
+          <div class="pillar-line"></div>
+          <h3 class="pillar-title">
+            <span class="utopia-text">Eco-design</span>
+            <span class="dystopia-text">Overproduction</span>
+          </h3>
+          <p class="pillar-desc">
+            <span class="utopia-text">Thinking about the lifecycle from inception. Using fewer materials, favoring healthy and sustainable resources.</span>
+            <span class="dystopia-text">Mass-producing items designed to break. Flooding the market to stimulate artificial demand.</span>
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar">
+          <img src="images/icon-reuse.png" alt="Reuse" class="pillar-icon utopia-text">
+          <img src="images/icon-obsolete.png" alt="Obsolescence" class="pillar-icon dystopia-text">
+          <span class="pillar-index">02</span>
+          <div class="pillar-line"></div>
+          <h3 class="pillar-title">
+            <span class="utopia-text">Longevity</span>
+            <span class="dystopia-text">Obsolescence</span>
+          </h3>
+          <p class="pillar-desc">
+            <span class="utopia-text">Repair, reuse, share. Usage takes precedence over ownership. A repaired product is a victory.</span>
+            <span class="dystopia-text">Making repair impossible. Rendering models obsolete via software. Forcing perpetual repurchase.</span>
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar">
+          <img src="images/icon-recycle.png" alt="Recycle" class="pillar-icon utopia-text">
+          <img src="images/icon-pollution.png" alt="Pollution" class="pillar-icon dystopia-text">
+          <span class="pillar-index">03</span>
+          <div class="pillar-line"></div>
+          <h3 class="pillar-title">
+            <span class="utopia-text">Recycling</span>
+            <span class="dystopia-text">Accumulation</span>
+          </h3>
+          <p class="pillar-desc">
+            <span class="utopia-text">Matter becomes a resource again. What was once waste feeds the creation of a new product.</span>
+            <span class="dystopia-text">Mountains of plastic, saturated oceans. Waste never truly disappears.</span>
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar">
+          <img src="images/icon-rethink.png" alt="Rethink" class="pillar-icon utopia-text">
+          <img src="images/icon-collapse.png" alt="Collapse" class="pillar-icon dystopia-text">
+          <span class="pillar-index">04</span>
+          <div class="pillar-line"></div>
+          <h3 class="pillar-title">
+            <span class="utopia-text">Regeneration</span>
+            <span class="dystopia-text">Depletion</span>
+          </h3>
+          <p class="pillar-desc">
+            <span class="utopia-text">Giving back to the earth more than we take. Restoring biodiversity and degraded ecosystems.</span>
+            <span class="dystopia-text">Barren soils, exhausted resources. The countdown to total collapse.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="section" id="impact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">The numbers speak</p>
+        <h2 class="section-title">
+          <span class="utopia-text">The <em>measured</em> impact</span>
+          <span class="dystopia-text">The <em>real</em> cost</span>
+        </h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-value"><span data-count-utopia="45" data-count-dystopia="68">0</span><span class="stat-unit">%</span></span>
+          <div class="stat-divider"></div>
+          <p class="stat-label">
+            <span class="utopia-text">reduction in global CO2 emissions</span>
+            <span class="dystopia-text">increase in toxic industrial emissions</span>
+          </p>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span data-count-utopia="4" data-count-dystopia="12">0</span><span class="stat-unit">T</span></span>
+          <div class="stat-divider"></div>
+          <p class="stat-label">
+            <span class="utopia-text">trillion generated economically</span>
+            <span class="dystopia-text">billion tons of un-recycled waste</span>
+          </p>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span data-count-utopia="80" data-count-dystopia="90">0</span><span class="stat-unit">%</span></span>
+          <div class="stat-divider"></div>
+          <p class="stat-label">
+            <span class="utopia-text">of material resources recovered and reused</span>
+            <span class="dystopia-text">of marine biodiversity severely threatened</span>
+          </p>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span data-count-utopia="18" data-count-dystopia="50">0</span><span class="stat-unit">M</span></span>
+          <div class="stat-divider"></div>
+          <p class="stat-label">
+            <span class="utopia-text">sustainable jobs created worldwide</span>
+            <span class="dystopia-text">projected climate refugees</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--cta">
+    <div class="container">
+      <div class="cta-content reveal">
+        <div class="cta-clock">
+          <svg viewBox="0 0 100 100" width="80" height="80" fill="none">
+            <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="2"/>
+            <circle cx="50" cy="50" r="3" fill="currentColor"/>
+            <line class="cta-hand-h" x1="50" y1="50" x2="50" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <line class="cta-hand-m" x1="50" y1="50" x2="70" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="46" stroke="var(--primary)" stroke-width="4" stroke-dasharray="289" stroke-dashoffset="250" class="cta-clock-progress"/>
+          </svg>
+        </div>
+        
+        <h2 class="cta-title">
+          <span class="utopia-text">There is still <em>time</em></span>
+          <span class="dystopia-text">Time has <em>run out</em></span>
+        </h2>
+        <p class="cta-desc">
+          <span class="utopia-text">Join us in rethinking our models and building an economy that respects life. Your voice matters.</span>
+          <span class="dystopia-text">Become aware of the absolute urgency. Every decision we delay precipitates this vision.</span>
+        </p>
+        
+        <div class="cta-actions">
+          <a href="forum.html" class="btn btn--primary btn--lg">
+            <span class="utopia-text">Join the movement</span>
+            <span class="dystopia-text">Act before the end</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inject Footer here -->
+  <div id="footer-slot"></div>
+
+  <script src="js/main.js"></script>
+  <!-- Three.js module -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/three-scene.js"></script>
+</body>
+</html>

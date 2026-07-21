@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenges & Ideas — Green Clock</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="feedback">
+
+  <div id="nav-slot"></div>
+
+  <div class="page-header text-center">
+    <div class="container">
+      <h1 class="page-title reveal">
+        <span class="utopia-text">The <em>Challenges</em> & Ideas</span>
+        <span class="dystopia-text">The <em>Current</em> Crises</span>
+      </h1>
+      <p class="page-subtitle reveal reveal-delay-1">Understand the roadblocks of the circular economy and propose solutions.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="feedback-layout reveal reveal-delay-2">
+      
+      <!-- Left Panel: Current Challenges -->
+      <div class="feedback-panel">
+        <h2 class="feedback-panel-title">Current Challenges</h2>
+        <p class="feedback-panel-desc">The main obstacles to the circular transition.</p>
+
+        <div class="challenge-card">
+          <span class="challenge-severity severity-high">Critical</span>
+          <h3 class="challenge-title">E-waste Crisis</h3>
+          <p class="challenge-desc">Exponential growth in electronic waste due to planned obsolescence. Less than 20% is properly recycled globally.</p>
+        </div>
+
+        <div class="challenge-card">
+          <span class="challenge-severity severity-high">Critical</span>
+          <h3 class="challenge-title">Fast Fashion</h3>
+          <p class="challenge-desc">The fashion industry produces 10% of global carbon emissions. Most clothing ends up incinerated or in massive open landfills.</p>
+        </div>
+
+        <div class="challenge-card">
+          <span class="challenge-severity severity-medium">Major</span>
+          <h3 class="challenge-title">Single-use Plastics</h3>
+          <p class="challenge-desc">Plastic production continues to rise. Mechanical recycling has reached its physical and economic limits with multi-layer plastics.</p>
+        </div>
+      </div>
+
+      <!-- Right Panel: Community Suggestions -->
+      <div class="feedback-panel">
+        <h2 class="feedback-panel-title">Suggestion Box</h2>
+        <p class="feedback-panel-desc">Propose and vote for the best citizen solutions.</p>
+
+        <div class="suggestion-form">
+          <div class="compose-row">
+            <input type="text" id="sugg-title" class="compose-input" placeholder="Title of your idea...">
+          </div>
+          <div class="compose-row">
+            <textarea id="sugg-text" class="compose-textarea" placeholder="Description of the solution..." style="min-height:70px;"></textarea>
+          </div>
+          <div style="display:flex; justify-content:flex-end;">
+            <button class="btn btn--primary" id="btn-submit-sugg">Submit idea</button>
+          </div>
+        </div>
+
+        <div id="suggestions-list">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

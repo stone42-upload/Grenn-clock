@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News — Green Clock</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="news">
+
+  <div id="nav-slot"></div>
+
+  <div class="page-header text-center">
+    <div class="container">
+      <h1 class="page-title reveal">
+        <span class="utopia-text">The <em>Breakthroughs</em></span>
+        <span class="dystopia-text">The <em>Warnings</em></span>
+      </h1>
+      <p class="page-subtitle reveal reveal-delay-1">News on circular economy and planetary boundaries.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="news-filters reveal reveal-delay-2">
+      <button class="filter-btn active">Featured</button>
+      <button class="filter-btn">Climate</button>
+      <button class="filter-btn">Innovation</button>
+      <button class="filter-btn">Science</button>
+    </div>
+
+    <!-- Featured Article (Doomsday Clock) -->
+    <article class="news-featured reveal reveal-delay-3">
+      <a href="article-doomsday.html">
+        <img src="images/doomsday-real.jpeg" alt="Doomsday Clock" class="featured-img">
+      </a>
+      <div class="featured-content">
+        <span class="featured-tag">Science & Society</span>
+        <h2 class="featured-title">
+          <a href="article-doomsday.html">The Doomsday Clock: 89 Seconds to Midnight</a>
+        </h2>
+        <p class="featured-excerpt">
+          The Bulletin of the Atomic Scientists has kept the Doomsday Clock at 89 seconds to midnight, the closest point to global annihilation ever reached, pointing to climate and nuclear risks.
+        </p>
+        <span class="featured-date">July 2026 • 5 min read</span>
+      </div>
+    </article>
+
+    <!-- News Grid -->
+    <div class="news-grid">
+      <!-- Card 1 -->
+      <article class="news-card reveal">
+        <img src="images/hero-utopia.png" alt="Innovation" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-tag">Innovation</span>
+          <h3 class="news-card-title"><a href="#">New record for solar energy in Europe</a></h3>
+          <p class="news-card-excerpt">The share of renewable energy surpasses 60% for the first time in the energy mix of several countries.</p>
+          <span class="news-card-date">Yesterday</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="news-card reveal">
+        <img src="images/icon-pollution.png" alt="Plastic" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-tag">Politics</span>
+          <h3 class="news-card-title"><a href="#">Global Plastics Treaty: Negotiations stall</a></h3>
+          <p class="news-card-excerpt">States struggle to agree on strict quotas for reducing the production of virgin plastics.</p>
+          <span class="news-card-date">3 days ago</span>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="news-card reveal">
+        <img src="images/icon-reduce.png" alt="Eco-design" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-tag">Eco-design</span>
+          <h3 class="news-card-title"><a href="#">Apple announces 100% recycled batteries</a></h3>
+          <p class="news-card-excerpt">A major breakthrough in cobalt and lithium recovery, proving the viability of closed circular supply chains.</p>
+          <span class="news-card-date">Last week</span>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

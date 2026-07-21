@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum — Green Clock</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="forum">
+
+  <div id="nav-slot"></div>
+
+  <div class="page-header text-center">
+    <div class="container">
+      <h1 class="page-title reveal">
+        <span class="utopia-text">The <em>Community</em></span>
+        <span class="dystopia-text">The <em>Final</em> Network</span>
+      </h1>
+      <p class="page-subtitle reveal reveal-delay-1">Exchange, debate, find solutions together.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="forum-layout reveal reveal-delay-2">
+      <!-- Sidebar -->
+      <aside class="forum-sidebar">
+        <button class="btn btn--primary" id="btn-new-thread" style="width:100%; margin-bottom:1.5rem;">+ New Thread</button>
+        <ul class="forum-categories">
+          <li><button class="forum-cat-btn active">View All <span class="forum-cat-count">12</span></button></li>
+          <li><button class="forum-cat-btn">General <span class="forum-cat-count">4</span></button></li>
+          <li><button class="forum-cat-btn">Eco-design <span class="forum-cat-count">3</span></button></li>
+          <li><button class="forum-cat-btn">Recycling <span class="forum-cat-count">5</span></button></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="forum-main">
+        <!-- Compose Form (Hidden by default) -->
+        <div class="forum-compose" id="compose-box" style="display:none;">
+          <h3 style="margin-bottom:1rem; font-family:var(--f-display);">Create a thread</h3>
+          <div class="compose-row">
+            <input type="text" id="compose-title" class="compose-input" placeholder="Thread title...">
+          </div>
+          <div class="compose-row">
+            <textarea id="compose-text" class="compose-textarea" placeholder="Your message..."></textarea>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap:.5rem;">
+            <button class="btn btn--secondary" id="btn-cancel-thread">Cancel</button>
+            <button class="btn btn--primary" id="btn-submit-thread">Publish</button>
+          </div>
+        </div>
+
+        <!-- Threads List -->
+        <div class="thread-list" id="thread-list">
+          <!-- Injected via JS -->
+        </div>
+        
+        <!-- Thread Detail (Hidden by default) -->
+        <div class="thread-detail" id="thread-detail" style="display:none;">
+          <button class="btn btn--ghost" id="btn-back" style="margin-bottom:1rem;">← Back</button>
+          <div class="thread-detail-header">
+            <span class="thread-tag" id="detail-tag">General</span>
+            <h2 class="thread-detail-title" id="detail-title">Title</h2>
+            <div class="thread-meta" style="margin-top:.5rem;">
+              <span id="detail-author">Author</span> • <span id="detail-date">Date</span>
+            </div>
+          </div>
+          <div class="thread-detail-body" id="detail-body">Text</div>
+          
+          <h4 style="margin-bottom:1rem; font-family:var(--f-display);">Replies</h4>
+          <div id="replies-list"></div>
+          
+          <div class="forum-compose" style="margin-top:2rem;">
+            <div class="compose-row">
+              <textarea id="reply-text" class="compose-textarea" placeholder="Write a reply..." style="min-height:60px;"></textarea>
+            </div>
+            <div style="display:flex; justify-content:flex-end;">
+              <button class="btn btn--primary" id="btn-submit-reply">Reply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/forum.js"></script>
+</body>
+</html>
